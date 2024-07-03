@@ -43,6 +43,33 @@ def HighLow(List):
     high = List[length-1]
     return (low,high)
 
+
+def FindHigh(List):
+    length = len(List)
+    high = 0
+    #for i in range(0,length):
+    test = List[0]
+    for n in range(1,length):
+        if test >= List[n]:
+            high = test
+        else:
+            test = List[n]
+            high = test
+    return high
+
+def FindLow(List):
+    length = len(List)
+    high = 0
+    #for i in range(0,length):
+    test = List[0]
+    for n in range(1,length):
+        if test <= List[n]:
+            high = test
+        else:
+            test = List[n]
+            high = test
+    return high
+
 def TotalList(List):
     #Returns total of list
     length = len(List)
@@ -99,6 +126,9 @@ High_Low = HighLow(Num_List)
 num_low = High_Low[0]
 num_high = High_Low[1]
 
+num_high2 = FindHigh(Num_Dsp)
+num_low2 = FindLow(Num_Dsp)
+
 Num_Dup = FindDups(Num_List)
 
 print()
@@ -116,10 +146,10 @@ print()
 print (f"THE AVERAGE VALUE OF YOUR LIST: {num_ave}")
 print()
 print()
-print (f"THE LOW VALUE ON YOUR LIST: {num_low}")
+print (f"THE LOW VALUE ON YOUR LIST: {num_low} or {num_low2}")
 print()
 print()
-print (f"THE HIGH VALUE ON YOUR LIST: {num_high}")
+print (f"THE HIGH VALUE ON YOUR LIST: {num_high} or {num_high2}")
 print()
 print()
 print (f"THE DUPICATE VALUES ON YOUR LIST: {Num_Dup}")
