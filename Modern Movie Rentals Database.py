@@ -66,13 +66,28 @@ print()
 print()
 print("**************************************************************************************")
 print()
-print ("Welcome to Modern movie Rental's Movie Database. Complete all fields. Enter 'END' for title to exit.")
+print ("Welcome to Modern movie Rental's Movie Database. Complete all fields. Enter 'SHOW' to list all current movies and 'END' for title to exit.")
 print()
 while True:
     movieid_dsp = movie_id
     movie_title = input ("Enter the title of the movie: ").upper()
     if movie_title == 'END':
         break
+    elif movie_title == 'SHOW':
+        print()
+        print ("Current Movies:")
+        print ("--------------------")
+        with open("Movies.dat", "r") as file:
+            for line in file:
+                movie_info = line.strip().split(", ")
+                movie_id = movie_info[0]
+                movie_title = movie_info[1]
+                movie_genre = movie_info[2]
+                movie_rating = movie_info[3]
+                movie_price = movie_info[4]
+                print(f"ID: {movie_id} - Title: {movie_title} - Genre: {movie_genre} - Rating: {movie_rating} - Price: {movie_price}")
+            print()
+        print()
     else:
 
         while True: 
