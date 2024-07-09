@@ -19,6 +19,7 @@ MAX_RENT = 8.99
 #Program functions
 
 def GenreTag(genre):
+    #Turns user letter choice into full text for storage
     if genre == 'D':
         full_genre = "Drama"
     if genre == 'C':
@@ -33,6 +34,7 @@ def GenreTag(genre):
 
 
 def RatingTag(rating):
+    #Turns user letter choice into full text for storage
     if rating == 'G':
         full_rating = "General"
     if rating == 'P':
@@ -47,12 +49,13 @@ def Money(enter_num):
     return price_dsp
 
 def Progress():
+    #Creates a simple progress bar 
     for i in range (51):
         print('\r[' + '*' * i + ' ' * (50 - i) + ']', end='')
         time.sleep(0.01)
     print()
 
-
+#checks for movieID file to keep listing updated.
 try:
     with open ("CurrentID.dat") as file:
         movie_id = file.read()
