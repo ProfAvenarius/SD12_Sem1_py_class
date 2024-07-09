@@ -86,7 +86,7 @@ while True:
 
         while True:
             print()
-            movie_rating = input ("Enter the movie's rating: 'G' for General, 'P' for Parental Guidance, or 'R' for Restricted").capitalize()
+            movie_rating = input ("Enter the movie's rating: 'G' for General, 'P' for Parental Guidance, or 'R' for Restricted: ").capitalize()
             if movie_rating in RATINGS:
                 rating_dsp = RatingTag(movie_rating)
                 break
@@ -104,7 +104,9 @@ while True:
             else:
                 price_dsp = Money(rent_price)
                 break
-
+                
+        print()
+        print()
         Progress()
         print()
         print()
