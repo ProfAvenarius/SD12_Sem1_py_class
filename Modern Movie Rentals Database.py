@@ -127,6 +127,6 @@ while True:
 
 print()
 print()
-print ("Thank you and havve a nice day.")
+print ("Thank you and have a nice day.")
 print()
 print()
