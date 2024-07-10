@@ -1,4 +1,4 @@
-#Description: A program for Local Hotel to manage bookings and reservations for their Convention Ctr.
+#Description: From Exercises 31/32 A program for Local Hotel to manage bookings and reservations for their Convention Ctr.
 #Author: DCE
 #Date: Jul 10
 
