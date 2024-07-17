@@ -1,5 +1,6 @@
 # Description: Program introducing report generation, a payment due report modified from class
 #              example with addition of return date functions and phone number accumulator.
+#              Calls for data from Customers.dat file.
 # Author: MB, DCE
 # Date(s): July 16, 2024
  
